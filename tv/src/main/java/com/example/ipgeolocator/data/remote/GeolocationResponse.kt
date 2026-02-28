@@ -1,0 +1,4 @@
+package com.example.ipgeolocator.data.remote
+
+class GeolocationResponse {
+}
