@@ -39,6 +39,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.leanback)
+    implementation(libs.androidx.appcompat)
     implementation(libs.glide)
 
     implementation(libs.room.runtime)

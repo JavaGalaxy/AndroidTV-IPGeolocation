@@ -1,4 +1,4 @@
 <resources>
 
-    <style name="Theme.IPGeolocator" parent="@style/Theme.Leanback" />
+    <style name="Theme.IPGeolocator" parent="@style/Theme.AppCompat.DayNight.DarkActionBar" />
 </resources>

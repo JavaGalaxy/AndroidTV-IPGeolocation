@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_browse_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="48dp"
+    android:background="#1a1a1a"
+    android:gravity="center"
     tools:context=".MainActivity"
-    tools:deviceIds="tv"
-    tools:ignore="MergeRootFrame" />
+    tools:deviceIds="tv">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP Geolocation Finder"
+        android:textSize="32sp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <EditText
+            android:id="@+id/etIpAddress"
+            android:layout_width="400dp"
+            android:layout_height="56dp"
+            android:hint="Enter IP address (e.g., 8.8.8.8)"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="#ffffff"
+            android:textColorHint="#cccccc"
+            android:inputType="text"
+            android:imeOptions="actionSearch" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="120dp"
+            android:layout_height="56dp"
+            android:text="Search"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_bg"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Results Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:padding="24dp"
+            android:background="@drawable/results_bg"
+            android:text="Enter an IP address to get started"
+            android:gravity="start" />
+
+    </ScrollView>
+
+</LinearLayout>
